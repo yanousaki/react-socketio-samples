@@ -4,7 +4,6 @@ const io = require('socket.io')(http);
 const port = 8000;
 let connectCounter = 0;
 
-// Connection
 io.on('connection', (client) => {
     const sessionID = client.id;
     connectCounter++;
