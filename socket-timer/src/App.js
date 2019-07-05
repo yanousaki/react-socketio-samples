@@ -13,7 +13,6 @@ class App extends Component {
 
   state = {
     timestamp: 'no timestamp yet',
-    msg: 'no message yet'
   };
 
   render() {
