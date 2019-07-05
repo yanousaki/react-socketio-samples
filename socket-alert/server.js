@@ -19,12 +19,17 @@ io.on('connection', (client) => {
         connectCounter--;
         console.log(sessionID, 'left. Connections:', connectCounter);
     });
+});
 
-    client.on('subscribeToTimer', (interval) => {
-        setInterval(() => {
-            client.emit('timer', new Date());
-        }, interval);
-    });
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.post('/message', function (req, res) {
+    let msg = req.body.msg;
+    io.sockets.emit('alert', msg);
+    console.log('alert message: ' + msg);
+    res.send('alert message: ' + msg);
 });
 
 http.listen(port, () => {
