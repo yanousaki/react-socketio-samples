@@ -1,0 +1,16 @@
+{
+  "name": "non-react",
+  "version": "1.0.0",
+  "description": "Single-Page Application without Framework [Link](https://www.sitepoint.com/single-page-app-without-framework/)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
