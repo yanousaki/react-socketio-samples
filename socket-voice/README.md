@@ -16,3 +16,8 @@ Runs the server in http://localhost:8000
 ### `python3 publish.py <alert message>`
 
 Publishes a text "alert message" to the app in [http://localhost:3000](http://localhost:3000).
+
+## Features
+
+List of [supported languages](https://stackoverflow.com/questions/23733537/what-are-the-supported-languages-for-web-speech-api-in-html5)
+

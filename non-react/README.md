@@ -1,1 +1,0 @@
-Single-Page Application without Framework [Link](https://www.sitepoint.com/single-page-app-without-framework/)

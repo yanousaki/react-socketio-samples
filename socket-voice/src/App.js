@@ -44,7 +44,12 @@ class App extends Component {
       <div className="App">
         <p>Voice Alert Sample</p>
         <ReactNotification ref={this.notificationDOMRef} />
-        <Say speak={this.state.msg} />
+        <Say 
+          speak={this.state.msg}
+          voice={ voices => [].find.call(voices, v => v.lang === 'ja-JP') }
+          // voice={ voices => [].find.call(voices, v => v.lang === 'en-IN') }
+          // voice={ voices => [].find.call(voices, v => v.lang === 'en-AU') }
+        />
       </div>
     );
   }
