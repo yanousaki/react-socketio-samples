@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/message', function (req, res) {
     let msg = req.body.msg;
-    io.sockets.emit('alert', msg);
-    console.log('alert message: ' + msg);
-    res.send('alert message: ' + msg);
+    io.sockets.emit('message', msg);
+    console.log('message: ' + msg);
+    res.send('message: ' + msg);
 });
 
 http.listen(port, () => {
