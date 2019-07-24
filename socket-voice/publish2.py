@@ -3,14 +3,18 @@ import sys
 import json
 import requests
 from datetime import datetime
+import random
 
 url = 'http://localhost:8000/message'
+
+places=["Tokyo", "Kyoto", "Mihama Ward", "Nakase Ward", "Osaka", "Yokohama"]
+magnitude=["1","2","3","4","5","6","7"]
 
 data={
     "OriginTime":'originTime',
     "ArrivalTime":'arrivalTime',
-    "AreaName":'Tokyo',
-    "Magnitude":'5',
+    "AreaName": places[random.randrange(len(places))],
+    "Magnitude": magnitude[random.randrange(len(magnitude))],
     "NextAdvisory":'nextAdvisory' }
 
 msg_type='jma_eq_ewfcst'                                              
