@@ -21,7 +21,7 @@ class App extends Component {
   };
 
   alertMain(msg) {
-    this.setState({msg})
+    this.setState({msg:msg})
     this.addNotification(msg)
   }
 
