@@ -24,7 +24,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post('/message', function (req, res) {
+app.post('/messages', function (req, res) {
     let msg = req.body.msg;
     io.sockets.emit('message', msg);
     console.log('message: ' + msg);
